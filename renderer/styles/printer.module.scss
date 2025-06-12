@@ -1,0 +1,188 @@
+@use "variables" as vars;
+@mixin iconSize {
+  max-height: 84px;
+}
+@mixin printerGridStyle {
+  position: absolute;
+  bottom: 24px;
+  display: flex;
+  gap: 2rem;
+}
+//   =================
+.printerWrapper {
+  height: calc(100vh - 132px);
+  display: flex;
+  gap: 1rem;
+  .secHead {
+    min-height: 50px;
+  }
+  .printerSidePanel {
+    width: 360px;
+    .productionDetails {
+      position: relative;
+      background: rgb(vars.$color-white);
+      border: vars.$border-size solid rgb(vars.$border-color);
+      border-radius: vars.$border-radius;
+      padding: 2.25rem 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      height: calc(100% - 50px);
+      .productionDetailTitle {
+        position: absolute;
+        top: -19px;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+        width: 160px;
+        height: 36px;
+        font-weight: 600;
+        background: rgb(vars.$color-white);
+        border: vars.$border-size solid rgb(vars.$border-color);
+        border-radius: vars.$border-radius;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+      }
+      .productionDetailsItemContainer {
+        overflow-x: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        .productionDetailsItemRow {
+          display: flex;
+          .gridKey {
+            flex: 0 0 150px;
+            font-weight: 600;
+          }
+          .gridValue {
+            flex: 1 1 auto;
+          }
+        }
+      }
+    }
+  }
+  .printerLineSec {
+    flex-grow: 1;
+    .printerLineWrapper {
+      height: calc(100% - 50px);
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    .printerLineContainer {
+      background: rgb(vars.$color-white);
+      border: vars.$border-size solid rgb(vars.$border-color);
+      border-radius: vars.$border-radius;
+      padding: 1rem;
+      .itemKey {
+        font-weight: 400;
+      }
+      .itemValue {
+        font-weight: 600;
+      }
+      .printerLineRow {
+        position: relative;
+        height: 120px;
+        .belt {
+          background: #aaaaaa;
+          border: 1px solid rgb(vars.$color-black);
+          height: 1.5rem;
+          border-radius: 30px;
+          position: absolute;
+          bottom: 0;
+          left: 1rem;
+          right: 1rem;
+        }
+
+        .printingInfo {
+          .printingInfoValue {
+            font-weight: 600;
+            margin-top: 0.5rem;
+          }
+        }
+        .printerGrid {
+          @include printerGridStyle();
+          left: 100px;
+          img {
+            @include iconSize();
+          }
+        }
+        .scannerGrid {
+          @include printerGridStyle();
+          left: 50%;
+          img {
+            @include iconSize();
+          }
+        }
+        .rejectionCart {
+          @include printerGridStyle();
+          right: 50px;
+          img {
+            @include iconSize();
+          }
+        }
+      }
+      .printerCard,
+      .scannerCard {
+        min-height: 141px;
+        background: rgb(vars.$color-white);
+        border: vars.$border-size solid rgb(vars.$border-color);
+        border-radius: vars.$border-radius;
+        .scannerCardBody {
+          padding: 1rem 1rem;
+        }
+      }
+      .printerCard {
+        .printerCardHead {
+          border-bottom: 1px solid rgb(vars.$color-primary);
+          padding: 0.5rem 1rem;
+        }
+        .printerCardBody {
+          padding: 1rem 1rem;
+          text-align: center;
+        }
+      }
+    }
+    .qrDetails {
+      position: relative;
+      .qrDetailsCard {
+        padding: 1.25rem 1.25rem;
+        border-radius: vars.$border-radius;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        .qrDetailsCardText {
+          .itemKey {
+            font-size: 1.25rem;
+            font-weight: 600;
+          }
+          .itemValue {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 2rem;
+          }
+        }
+        .qrDetailsCardImg {
+          img {
+            max-height: 80px;
+          }
+        }
+      }
+
+      .productionCard {
+        background: #bdef91;
+        color: #067826;
+      }
+      .rejectedCard {
+        background: #ffc2c2;
+        color: #a93030;
+      }
+      .sampleCard {
+        background: #b6d4f6;
+        color: #26559c;
+      }
+    }
+  }
+}

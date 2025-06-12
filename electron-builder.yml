@@ -1,0 +1,12 @@
+appId: controlprint.com
+productName: iSerialize
+copyright: Copyright © 2022 Control Print limited
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+publish: null

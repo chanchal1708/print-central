@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+// --------------------------
+:root {
+  --background-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0;
+  --foreground-light-rgb: 148, 148, 148;
+  // -------
+  --font-robo: "Roboto", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  // -------
+  --font-size: 0.85rem;
+  --font-size-s: 0.75rem;
+  --font-size-l: 1rem;
+  --font-size-xl: 1.5rem;
+  //   ================
+  --color-primary-rgb: 250, 58, 92;
+  --color-secondary-rgb: 0, 0, 0;
+  --color-white-rgb: 255, 255, 255;
+  --color-black-rgb: 0, 0, 0;
+  --color-gray-rgb: 128, 128, 128;
+  --color-link-rgb: 28, 81, 195;
+  //   ================
+  --border-color-rgb: 217, 217, 217;
+  --border-size: 1px;
+  --border-radius: 1rem;
+  //   ================
+  --control-border-radius: 5px;
+  --grid-border-radius: 10px;
+  //   ================
+  --card-border-rgb: 217, 217, 217;
+  --card-border-size: 1px;
+  --card-border-radius: 0.75rem;
+  //   ================
+  --table-header-color-rgb: 250, 58, 92;
+  //   ================
+}
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --background-rgb: 0, 0, 0;
+//     --foreground-rgb: 255, 255, 255;
+//   }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --background-rgb: 230, 236, 246;
+//     --foreground-rgb: 0, 0, 0;
+//   }
+// }
+
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+// }

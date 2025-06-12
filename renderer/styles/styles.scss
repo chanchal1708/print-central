@@ -1,0 +1,79 @@
+@use "variables" as vars;
+@import "reset";
+@import "utilities";
+// ===================
+// ===================
+// =========product page==========
+.tblProductImageContainer {
+  img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+// =========product page==========
+// =========user page==========
+.userContainer {
+  height: 100%;
+  .userTitleContainer {
+    text-align: center;
+    padding-top: 0.5rem;
+    .cardImg {
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      overflow: hidden;
+      margin: auto;
+      margin-bottom: 1rem;
+    }
+  }
+}
+// =========user page==========
+.productionReviewedBy {
+  background: #dcdcdc;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.pdfContainer {
+  background: #e7e7e7;
+  border-radius: vars.$border-radius;
+  text-align: center;
+  padding: 3rem;
+  font-size: 65px;
+  &:hover {
+    color: rgb(184, 0, 0);
+  }
+}
+
+.sapDataContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+// ======== auditlog =========
+.tblAuditLogs {
+  .ant-table-tbody > tr > th,
+  .ant-table-tbody > tr > td {
+    border-bottom: 1px solid #6e6e6e;
+  }
+  .ant-table-tbody {
+    tr {
+      td {
+        .ant-table-wrapper:only-child {
+          .ant-table {
+            tr {
+              td {
+                padding-left: 1rem !important;
+              }
+            }
+          }
+        }
+      }
+      td:first-child {
+        border-left: 1px solid transparent !important;
+      }
+      td:last-child {
+        border-left: 1px solid #6e6e6e;
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "BACKEND_BASE_URL": " http://127.0.0.1:3004/v1",
+  "BACKEND_URL": " http://127.0.0.1:3004",
+  "PRINTER_ADDRESS": {
+    "host": "192.168.0.1",
+    "port": "8080"
+  },
+  "SCANNER_ADDRESS": {
+    "host": "192.168.0.101",
+    "port": "40"
+  },
+  "PLC_ADDRESS": {
+    "host": "192.168.3.250",
+    "port": "1024"
+  },
+  "PRINTER_TYPE": "TIJ",
+  "PDF_SCALE": 1,
+  "TYPE": "PRIMARY",
+  "NUMBER_OF_TRACK": 1,
+  "logPath": "C:\\PrinterLogs",
+  "DEBUG_MODE": false,
+  "SIZE_VARIANCE_PER": 1.2,
+  "PRINTER_QUEUE_SIZE": 50,
+  "REFETCH_WHEN_SIZE": 30,
+  "REFETCH_SIZE": 20,
+  "GET_STATUS_TIME": 1000,
+  "BEFORE_DATE": 15,
+  "AFTER_DATE": 15,
+  "EXPIRY_DATE": 10,
+  "SCANNER_NO_READ_TEXT": "No Read",
+  "SCANNER_SEPARATOR": ",",
+  "COUNT_DIFF": 20,
+  "CHECK_STATUS_TIME": 2000,
+  "COMMAND_DELAY_TIME": 1000,
+  "DATA_WRITE_DELAY_TIME": 200,
+  "RELOAD_TIME": 1000,
+  "MSG_NAME": "testing",
+  "CONDITION_COUNT": 9999999,
+  "BATCH_CLOSED_RESTART": false,
+  "SKIP_UID": 3,
+  "INPUT_FILE_LENGTH": 8,
+  "REPORT_STATUS": [10],
+  "ADD_PRODUCTION": false,
+  "PRINT_COUNT_DIFF": 10,
+  "SCANNER_OFFLINE_SECONDS": 120,
+  "PRINTING_DATA": {
+    "exp": "DateOfExpiry",
+    "mfg": "DateOfManufacture",
+    "batch": "BatchNumber",
+    "qrcode": "qrcode"
+  },
+  "BACKUP_PATH": "C:\\input_backup",
+  "MULTI_FILE": false,
+  "DISABLE_PRODUCTION_ADD_FIELDS": true,
+  "HARD_RESET_ALARM": "Alarm reset manually.",
+  "ALARM_POS": {
+    "1": { "msg": "Low air pressure detected." },
+    "2": { "msg": "Camera is offine" },
+    "3": { "msg": "PLC reset command executed" },
+    "4": { "msg": "Emergency condition detected" },
+    "5": { "msg": "Reject command executed" }
+  },
+  "TIJ": {
+    "NUMBER_OF_TRACK": 2,
+    "CHECK_INK_STATUS_TIME": 5,
+    "PRINTING_DATA": {
+      "exp": "DateOfExpiry",
+      "mfg": "DateOfManufacture",
+      "batch": "BatchNumber",
+      "qrcode": "qrcode",
+      "price": "Price"
+    },
+    "PRINTING_TEXT": {
+      "exp": "EXP.Dt.",
+      "mfg": "MFG.Dt.",
+      "batch": "B.NO.",
+      "price": "M.R.P.Rs."
+    },
+    "FIRST_HEAD_CONFIG": {
+      "GroupName": "g1",
+      "SelectMessage": "exemed1",
+      "ResetMessage": true
+    },
+    "SECOND_HEAD_CONFIG": {
+      "GroupName": "g2",
+      "SelectMessage": "exemed2",
+      "ResetMessage": true
+    }
+  }
+}

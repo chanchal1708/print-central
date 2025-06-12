@@ -1,0 +1,377 @@
+@use "variables" as vars;
+@import "mixins";
+// -------------------
+
+.ant-input-affix-wrapper {
+  color: rgb(vars.$color-foreground) !important;
+  .ant-input-prefix {
+    position: relative;
+    padding-right: 10px !important;
+    &::after {
+      content: "";
+      border-right: 1px solid #ddd;
+      height: 60%;
+      position: absolute;
+      right: 0px;
+    }
+  }
+}
+.ant-input,
+.ant-input-lg {
+  @include control-border-radius();
+}
+.ant-input-affix-wrapper-lg {
+  @include control-border-radius();
+}
+.ant-select-single.ant-select-lg .ant-select-selector {
+  @include control-border-radius();
+}
+.ant-btn,
+.ant-btn-lg {
+  @include control-border-radius();
+  .center-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Ensures full viewport height */
+  }
+}
+.ant-btn {
+  .ant-btn-icon {
+    // font-size: 18px;
+  }
+}
+.ant-btn-lg {
+  .ant-btn-icon {
+    font-size: 22px;
+  }
+}
+
+.ant-btn-variant-link {
+  padding: 0 0;
+  height: auto;
+  line-height: normal;
+  color: rgb(vars.$color-link);
+}
+.ant-btn-variant-link:not(:disabled):not(.ant-btn-disabled):hover {
+  color: rgb(vars.$color-primary);
+}
+// --------------
+.ant-form-item {
+  color: rgb(vars.$color-foreground) !important;
+  font-size: vars.$font-size-s !important;
+  line-height: vars.$font-size !important;
+  margin-bottom: 20px !important;
+  .ant-form-item-label {
+    padding: 0 0 4px 0 !important;
+    label {
+      height: auto !important;
+      font-size: vars.$font-size-s !important;
+      line-height: vars.$font-size !important;
+      line-height: normal !important;
+      color: rgb(vars.$color-foreground) !important;
+      &.ant-form-item-required::before {
+        order: 3;
+      }
+      &.ant-form-item-required::after {
+        order: 1;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+      }
+    }
+  }
+  .ant-form-item-explain-error {
+    font-size: vars.$font-size-s !important;
+    line-height: 16px;
+  }
+}
+// -------------
+.ant-card {
+  border-radius: vars.$card-border-radius;
+  .ant-card-head,
+  .ant-card-body {
+    padding: 0.5rem 1rem;
+  }
+  .ant-card-body {
+    padding: 1rem 1rem;
+  }
+  .ant-card-head {
+    border-bottom: 1px solid transparent !important;
+  }
+  .ant-card-actions {
+    background: transparent;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    &::after,
+    &::before {
+      display: none;
+    }
+    // li {
+    //   width: auto !important;
+    // }
+    li:not(:last-child) {
+      border-inline-end: none;
+    }
+  }
+}
+.ant-card-bordered {
+  border: 1px solid rgb(vars.$card-border-color) !important;
+}
+
+// -------------
+.ant-modal {
+  color: rgb(vars.$color-black);
+  .ant-modal-content {
+    padding: 0px 0px;
+    .ant-modal-close {
+      top: 8px;
+    }
+    .ant-modal-header,
+    .ant-modal-body,
+    .ant-modal-footer {
+      padding: 0.75rem 1.5rem;
+    }
+    .ant-modal-header {
+      border-bottom: 1px solid rgb(vars.$border-color);
+    }
+    .ant-modal-footer {
+      text-align: center;
+      padding-top: 0rem;
+      margin-top: 0rem;
+      padding-bottom: 2rem;
+      .ant-btn + .ant-btn {
+        margin-inline-start: 2rem;
+      }
+    }
+  }
+}
+// -------------
+.ant-tabs {
+  .ant-tabs-tab {
+    &:hover {
+      color: rgb(vars.$color-black) !important;
+    }
+  }
+  .ant-tabs-tab-btn {
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+  .ant-tabs-tab-active {
+    .ant-tabs-tab-btn {
+      background: rgb(vars.$color-black);
+      color: rgb(vars.$color-white) !important;
+    }
+  }
+  .ant-tabs-tab + .ant-tabs-tab {
+    margin: 0 0 0 16px !important;
+  }
+}
+.ant-tabs-top {
+  .ant-tabs-nav {
+    &::before {
+      display: none;
+    }
+    .ant-tabs-ink-bar-animated {
+      display: none;
+    }
+  }
+}
+
+// -------------
+.ant-tag {
+  // background: transparent !important;
+  // border-color: transparent !important;
+}
+// ------------
+.ant-table-wrapper {
+  .ant-table-thead {
+    tr {
+      td,
+      th {
+        background: rgb(vars.$table-header-color) !important;
+        color: rgb(vars.$color-white) !important;
+        font-weight: 400;
+        &:first-child {
+          border-radius: 0 0 0 0 !important;
+        }
+        &:last-child {
+          border-radius: 0 0 0 0 !important;
+        }
+      }
+    }
+  }
+  .ant-table-tbody {
+    tr {
+      td {
+        .ant-table-wrapper:only-child {
+          .ant-table {
+            font-size: 11px;
+            .ant-table-thead {
+              tr th {
+                background: #f5f5f5;
+                padding: 4px 4px;
+              }
+              tr:first-child > *:first-child,
+              tr:last-child > *:last-child {
+                border-radius: 0 0 0 0 !important;
+              }
+            }
+            .ant-table-tbody {
+              tr td {
+                padding: 4px 4px;
+              }
+              tr:last-child {
+                td {
+                  border-bottom: 1px solid #f0f0f0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .ant-table.ant-table-small {
+    font-size: 12px;
+    .ant-table-tbody {
+      .ant-table-wrapper:only-child {
+        .ant-table {
+          margin-block: 1rem;
+          margin-inline: 0px 0px;
+        }
+      }
+    }
+  }
+}
+// ----------
+.ant-list-sm {
+  .ant-list-item {
+    padding: 8px 0px;
+  }
+  .ant-list-header {
+    padding-block: 6px;
+  }
+}
+// ----------
+.ant-breadcrumb a {
+  color: rgb(vars.$color-secondary);
+  &:hover {
+    color: rgb(vars.$color-secondary);
+    background-color: transparent;
+  }
+}
+// ----------
+.editable-cell {
+  position: relative;
+}
+
+.editable-cell-value-wrap {
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.editable-row:hover .editable-cell-value-wrap {
+  padding: 4px 11px;
+  border: 1px solid rgb(vars.$border-color);
+  border-radius: 2px;
+}
+
+// .ant-switch {
+//   background: transparent;
+//   border: 2px solid rgb(vars.$color-black);
+//   border-radius: 4px;
+//   height: 32px;
+//   .ant-switch-handle {
+//     width: 24px;
+//     height: 24px;
+//     border-radius: 0px;
+//     &::before {
+//       background-color: rgb(vars.$color-black);
+//       border-radius: 0px;
+//       box-shadow: none;
+//     }
+//   }
+//   .ant-switch-inner {
+//     padding-inline-start: 36px;
+//     .ant-switch-inner-checked,
+//     .ant-switch-inner-unchecked {
+//       display: block;
+//       color: rgb(vars.$color-black);
+//       min-height: 22px;
+//       font-size: 1rem;
+//       line-height: 30px;
+//       text-transform: uppercase;
+//     }
+//     .ant-switch-inner-checked {
+//       margin-inline-start: calc(-100% + 2px - 48px);
+//       margin-inline-end: calc(100% - 22px + 48px);
+//       color: rgb(vars.$color-white);
+//     }
+//     .ant-switch-inner-unchecked {
+//       margin-top: -30px;
+//     }
+//   }
+//   &.ant-switch-checked {
+//     .ant-switch-handle {
+//       inset-inline-start: calc(100% - 28px);
+//     }
+//     .ant-switch-inner {
+//       padding-inline-start: 9px;
+//       padding-inline-end: 36px;
+//       .ant-switch-inner-unchecked {
+//         margin-inline-start: calc(100% - 12px + 48px);
+//         margin-inline-end: calc(-100% + 12px - 48px);
+//       }
+//     }
+//   }
+//   &:hover:not(.ant-switch-disabled) {
+//     background: rgba(0, 0, 0, 0);
+//   }
+// }
+
+// .ant-switch-lg {
+//   height: 40px;
+//   .ant-switch-handle {
+//     top: 6px;
+//   }
+//   .ant-switch-inner {
+//     .ant-switch-inner-checked,
+//     .ant-switch-inner-unchecked {
+//       line-height: 38px;
+//     }
+//     .ant-switch-inner-unchecked {
+//       margin-top: -38px;
+//     }
+//   }
+// }
+
+.ant-divider-horizontal-sm {
+  margin: 12px 0 !important;
+}
+
+.ant-drawer {
+  .ant-drawer-close {
+    background: rgb(vars.$color-white);
+    border: 2px solid rgb(vars.$color-primary);
+    color: rgb(vars.$color-primary);
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    &:hover {
+      background: rgb(vars.$color-white);
+      color: rgb(vars.$color-primary);
+    }
+  }
+}
+.ant-tree {
+  .menu-link,
+  a {
+    color: rgb(vars.$color-foreground) !important;
+    font-size: 0.75rem;
+  }
+}

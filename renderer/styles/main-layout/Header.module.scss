@@ -1,0 +1,55 @@
+@use "../variables" as vars;
+.qc_main_header {
+  background: rgb(vars.$color-white);
+  color: rgb(vars.$color-black);
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+  overflow: hidden;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  .qc__header__logo {
+    img {
+      max-height: 42px;
+    }
+  }
+  .qc__brand__name {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .qc_header_right_col {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    .qc_header_user_info {
+      color: rgb(vars.$color-foreground) !important;
+      border: vars.$border-size solid rgb(vars.$border-color) !important;
+      border-radius: vars.$control-border-radius;
+      padding: 5px 10px;
+      min-width: 160px;
+      height: auto !important;
+      justify-content: space-between;
+      .user_title {
+        font-size: 13px;
+        line-height: 14px;
+        text-align: left;
+        .role {
+          font-weight: 500;
+        }
+        .user__name {
+          color: rgba(vars.$color-foreground, 0.75);
+        }
+      }
+    }
+  }
+  .qc__client__logo {
+    img {
+      max-height: 40px;
+      width: auto;
+    }
+  }
+}

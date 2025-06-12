@@ -1,0 +1,76 @@
+$spacer: 1rem;
+$font-weight: 100;
+// =========================
+// =========================
+// Margin utilities
+@mixin generate-margins() {
+  @for $i from 0 through 5 {
+    .qc_m_#{$i} {
+      margin: $i * $spacer / 4 !important;
+    }
+    .qc_mt_#{$i} {
+      margin-top: $i * $spacer / 4 !important;
+    }
+    .qc_mb_#{$i} {
+      margin-bottom: $i * $spacer / 4 !important;
+    }
+    .qc_ms_#{$i} {
+      margin-left: $i * $spacer / 4 !important;
+    }
+    .qc_me_#{$i} {
+      margin-right: $i * $spacer / 4 !important;
+    }
+    .qc_mx_#{$i} {
+      margin-left: $i * $spacer / 4 !important;
+      margin-right: $i * $spacer / 4 !important;
+    }
+    .qc_my_#{$i} {
+      margin-top: $i * $spacer / 4 !important;
+      margin-bottom: $i * $spacer / 4 !important;
+    }
+  }
+}
+
+@include generate-margins();
+
+// Padding utilities
+@mixin generate-paddings() {
+  @for $i from 0 through 5 {
+    .qc_p_#{$i} {
+      padding: $i * $spacer / 4 !important;
+    }
+    .qc_pt_#{$i} {
+      padding-top: $i * $spacer / 4 !important;
+    }
+    .qc_pb_#{$i} {
+      padding-bottom: $i * $spacer / 4 !important;
+    }
+    .qc_ps_#{$i} {
+      padding-left: $i * $spacer / 4 !important;
+    }
+    .qc_pe_#{$i} {
+      padding-right: $i * $spacer / 4 !important;
+    }
+    .qc_px_#{$i} {
+      padding-left: $i * $spacer / 4 !important;
+      padding-right: $i * $spacer / 4 !important;
+    }
+    .qc_py_#{$i} {
+      padding-top: $i * $spacer / 4 !important;
+      padding-bottom: $i * $spacer / 4 !important;
+    }
+  }
+}
+
+@include generate-paddings();
+
+// Font weight utilities
+@mixin generate-font-weights() {
+  @for $i from 1 through 9 {
+    .qc_fw_#{$i} {
+      font-weight: $i * $font-weight !important;
+    }
+  }
+}
+
+@include generate-font-weights();

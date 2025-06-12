@@ -1,0 +1,39 @@
+// ===================
+.message {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.success {
+  @extend .message;
+  border-color: green;
+  color: green;
+}
+.error {
+  @extend .message;
+  border-color: red;
+  color: red;
+}
+.warning {
+  border-color: orange;
+  color: orange;
+}
+// ========output============
+.button-basic,
+.button-report,
+.button-submit {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-report {
+  background-color: red;
+}
+
+.button-submit {
+  background-color: green;
+  color: white;
+}

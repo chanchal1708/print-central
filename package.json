@@ -1,0 +1,50 @@
+{
+  "name": "mankind-secodary",
+  "version": "0.1.0",
+  "private": true,
+  "main": "app/background.js",
+  "scripts": {
+    "dev": "nextron --renderer-port 4005",
+    "build": "nextron build",
+    "build:all": "nextron build --all",
+    "build:win32": "nextron build --win --ia32",
+    "build:win64": "nextron build --win --x64",
+    "build:mac": "nextron build --mac --x64",
+    "build:linux": "nextron build --linux",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.3.1",
+    "@babel/runtime-corejs3": "^7.27.6",
+    "@reduxjs/toolkit": "^2.5.1",
+    "antd": "^5.23.2",
+    "axios": "^1.9.0",
+    "dotenv": "^16.4.7",
+    "electron-serve": "^1.1.0",
+    "electron-store": "^8.1.0",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.3.0",
+    "moment": "^2.30.1",
+    "net": "^1.0.2",
+    "next-auth": "^4.24.11",
+    "ping": "^0.4.4",
+    "react-redux": "^9.2.0",
+    "redux": "^5.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^3.1.0",
+    "sass": "^1.83.4"
+  },
+  "devDependencies": {
+    "@ant-design/v5-patch-for-react-19": "^1.0.3",
+    "electron": "^21.3.3",
+    "electron-builder": "^23.6.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.5",
+    "identity-obj-proxy": "^3.0.0",
+    "next": "^13.5.11",
+    "nextron": "^8.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
